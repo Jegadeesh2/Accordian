@@ -5,14 +5,13 @@ import data from "./data";
 
 function App() {
   const [questions, setQuestions] = useState(data);
+  console.log(setQuestions);
   return (
     <div className="container">
       <h2>Frequently Asked Question's</h2>
       <section className="qa-container">
         {questions.map((question) => {
-          return (
-          <Question key={question.id} {...question}/>
-          )
+          return <Question key={question.id} {...question} />;
         })}
       </section>
     </div>
